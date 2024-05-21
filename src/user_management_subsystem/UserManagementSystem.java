@@ -439,6 +439,7 @@ class UserInterfaceManagementSystem {
         }
 
         System.out.println("Login successful.");
+System.out.println("Commit successfull: Changes have been committed.");
 
         // Start user session with book catalog
         userSessionContext.request();
