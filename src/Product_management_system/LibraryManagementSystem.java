@@ -64,10 +64,16 @@ package Product_management_system;
     	          return loggedIn;
     	      }
 
-    	      public void addBook(String title, String author, String isbn, String genre, int year) {
-    	          books.add(new Book(title, author, isbn, genre, year));
-    	          System.out.println("Book added successfully.");
-    	      }
+    	 
+    public void addBook(String title, String author, String isbn, String genre, int year) {
+        if (title.isEmpty() || author.isEmpty() || isbn.isEmpty() || genre.isEmpty()) {
+            System.out.println("Error: All book details must be provided.");
+            return;
+        }
+        books.add(new Book(title, author, isbn, genre, year));
+        System.out.println("Book added successfully.");
+    }
+
 
     	      public void updateBook(String title) {
     	          for (Book book : books) {
