@@ -300,7 +300,13 @@ public class InventoryManagement {
             System.out.println("2. User");
             System.out.println("3. Exit");
             System.out.print("Enter your choice: ");
-            int role = Integer.parseInt(scanner.nextLine());
+            int role;
+            try {
+                role = Integer.parseInt(scanner.nextLine()); // Input validation
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Please enter a valid number.");
+                continue;
+            }
             switch (role) {
                 case 1:
                     // Librarian/Administrator Operations
